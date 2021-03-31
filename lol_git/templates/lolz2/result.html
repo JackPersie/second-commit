@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'lolz2/base.html' %}
+{% block img %}
+<div class="container-fluid">
+    {% if res %}
+    <table>
+        <thead>
+            <th>User Name</th>
+            <th>Email Id</th>
+        </thead>
+        {% for det in res %}
+        <tr>
+            <td>{{ det.name }}</td>
+            <td>{{ det.mail }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>Sorry</p>
+    {% endif %}
+</div>
+{% endblock %}

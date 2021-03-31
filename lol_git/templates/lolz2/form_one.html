@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'lolz2/base.html' %}
+{% block img %}
+
+<div class="container-fluid">
+    <form method="POST">
+        {{ form_one.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Submit" class="btn-primary">
+    </form>
+
+</div>
+{% endblock %}
